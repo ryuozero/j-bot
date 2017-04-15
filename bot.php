@@ -3,18 +3,18 @@
 $strAccessToken = "DkTH9qphVYaX9f3rdGIGbaPHobTNaQjsh1B0hlwYLGGK1MnCaQqctpSbe1iJAiwm2ZwD8si7Ak6CMN8fkKJWjcybJ3XUCfbV+qQrAIzlFZv0x+z3ksuh7DEGgwa+Dbe/L6stKJSCBF9VkLYgBJFevwdB04t89/1O/w1cDnyilFU=";
 
 include("lotto.php");
-$rl = "รางวัลที่ 1 ".$tt[0]."\n"."เลขท้าย 2 ตัว ".$tt[1]."\n"."เลขหน้า 3 ตัว ".$tt[2]."\n"."เลขท้าย 3 ตัว ".$tt[3]."\n"."รางวัลข้างเคียงรางวัลที่ 1 ".$tt[4];
+$rl = $hk2."\n"."รางวัลที่ 1 ".$tt[0]."\n"."เลขท้าย 2 ตัว ".$tt[1]."\n"."เลขหน้า 3 ตัว ".$tt[2]."\n"."เลขท้าย 3 ตัว ".$tt[3]."\n"."รางวัลข้างเคียงรางวัลที่ 1 ".$tt[4];
 
 $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
  
 $strUrl = "https://api.line.me/v2/bot/message/reply";
-
+$jdata = "https://www.youtube.com/watch?v=Jt1h1MinlLI";
 
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
-$jdata = "https://www.youtube.com/watch?v=Jt1h1MinlLI";
+
  
 if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData = array();
