@@ -27,10 +27,17 @@ foreach ($title[1] as $realtitle) {
 	$i++;*/
 //}
 
+$tt = array();
+$ir = 0;
+foreach ($title[1] as $realtitle) {
+	
+	$k1 = str_replace("<span>", "", $realtitle);
+	$k2 = str_replace("</span>", "", $k1);
+	
+	$tt[$ir] = $k2;
+	$ir ++;	
 
-$j = json_encode($title);
-$x = json_decode($j);
-
+}
 
 
 /*echo "รางวัลที่ 1 ".$title[1][0]."<br>";

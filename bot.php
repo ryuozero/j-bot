@@ -3,7 +3,7 @@
 $strAccessToken = "DkTH9qphVYaX9f3rdGIGbaPHobTNaQjsh1B0hlwYLGGK1MnCaQqctpSbe1iJAiwm2ZwD8si7Ak6CMN8fkKJWjcybJ3XUCfbV+qQrAIzlFZv0x+z3ksuh7DEGgwa+Dbe/L6stKJSCBF9VkLYgBJFevwdB04t89/1O/w1cDnyilFU=";
 
 include("lotto.php");
-$rl = "ขอมาเราจัดให้ /n". "รางวัลที่ 1 ".$x[0][0]."/n"."เลขท้าย 2 ตัว ".$x[0][1]."/n"."เลขหน้า 3 ตัว ".$x[0][2]."/n"."เลขท้าย 3 ตัว ".$x[0][3]."/n"."รางวัลข้างเคียงรางวัลที่ 1 ".$x[0][4]."/n";
+$rl = "รางวัลที่ 1 ".$tt[0]."<br>"."เลขท้าย 2 ตัว ".$tt[1]."<br>"."เลขหน้า 3 ตัว ".$tt[2]."<br>"."เลขท้าย 3 ตัว ".$tt[3]."<br>"."รางวัลข้างเคียงรางวัลที่ 1 ".$tt[4]."<br>";
 
 $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
