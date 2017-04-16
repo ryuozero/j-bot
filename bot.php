@@ -87,7 +87,7 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData['messages'][0]['type'] = "video";
   $arrPostData['messages'][0]['originalContentUrl'] = "https://krujunrmu.com/img/ff.mp4";
   $arrPostData['messages'][0]['previewImageUrl'] = "https://krujunrmu.com/img/ff.jpg";	
-}else if($arrJson['events'][0]['message']['text'] == "หวย"){
+}else if($arrJson['events'][0]['message']['text'] == "หวย" || $arrJson['events'][0]['message']['text'] == "ตรวจฉลาก" ){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
