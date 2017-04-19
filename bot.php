@@ -7,7 +7,10 @@ $rl = $hk2[0]."\n"."รางวัลที่ 1 ".$tt[0]."\n"."เลขท้
 
 $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
- 
+$textx = $arrJson['events'][0]['message']['text']; 
+
+
+
 $strUrl = "https://api.line.me/v2/bot/message/reply";
 $jdata = "https://www.youtube.com/watch?v=Jt1h1MinlLI";
 
@@ -92,6 +95,11 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = $rl;
+}else if(stristr($textx, "รัก")){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "พูดแบบนี้ก็เขินนะครับ \n แต่ขอโทษด้วยมีแพรเป็นแฟนแล้ว";
 }
 /*else{
   $arrPostData = array();
